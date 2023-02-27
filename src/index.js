@@ -18,16 +18,13 @@ module.exports = function check(str, bracketsConfig) {
 
           let topEl = stack[stack.length - 1];
 
-          if (topEl === openingBracket) {
-            stack.pop()
+          if (openingBracket === topEl) {
+            stack.pop();
           } else {
             return false;
           }
-
         }
-      
       }
-
     }
   });
 
